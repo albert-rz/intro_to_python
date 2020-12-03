@@ -1,0 +1,64 @@
+.reveal h1 {
+    _color: blue !important;
+}
+
+em {
+    color: rgb(249,38,114);
+    font-style: normal !important;
+}
+
+div.jp-InputPrompt {
+    display: none;
+}
+
+div.jp-OutputPrompt {
+    display: none;
+}
+
+.jp-CodeCell .jp-Cell-inputWrapper  {
+    width: 49%;
+    float: left;
+}
+
+.jp-CodeCell .jp-Cell-outputWrapper  {
+    width: 49%;
+    float: right;
+    margin-left: 2%;
+}
+
+span {
+    font-size: 12px !important;
+}
+
+pre {
+    font-size: 12px !important;
+}
+
+code {
+    font-size: 85% !important;
+}
+
+pre code {
+    background-color: #F5F5F5 !important;
+    padding: 20px !important;
+    font-size: 100% !important;
+}
+
+body {
+    padding-left: 20px !important;
+    padding-right: 10px !important;
+}
+
+
+.highlight pre {
+    background-color: #F5F5F5 !important;
+    padding: 20px !important;
+}
+
+p code {
+    background-color: white !important;
+}
+
+img {
+    max-width: 800px !important;
+}

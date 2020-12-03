@@ -1,0 +1,4 @@
+jupyterlab==2.2.9
+pandas==1.1.4
+pylint==2.6.0
+RISE==5.7.1

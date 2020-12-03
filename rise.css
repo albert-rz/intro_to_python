@@ -1,0 +1,77 @@
+div.prompt {
+    background-color: blue;
+    display: none;
+}
+
+#Title {
+    color: red;
+}
+
+.input {
+    width: 49%;
+    float: left;
+}
+
+.output_wrapper {
+    width: 49%;
+    float: right;
+    margin-left: 2%;
+}
+
+.code_cell {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.cell.code_cell {
+    border: 0px;
+    background: white;
+}
+
+div.cell.selected::before {
+    background: white;
+}
+
+img {
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+em {
+    color: rgb(249,38,114);
+    font-style: normal !important;
+}
+
+.text_cell {
+    font-size: 100% !important;
+}
+
+.code_cell {
+    font-size: 18px;
+}
+
+.center_text {
+    text-align: center !important;
+}
+
+code {
+    font-size: 90% !important;
+    font-family: "Ubuntu Mono";
+    background-color: #F5F5F5 !important;
+}
+
+pre code {
+    padding: 20px !important;
+    background-color: #F5F5F5 !important;
+}
+
+pre {
+    margin-left: 0px !important;
+}
+
+p img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
