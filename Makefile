@@ -51,14 +51,14 @@ clear-notebook:
 	$(JUPYTER) nbconvert --clear-output $(INTRO_BASIC_NB)
 
 
-push: clear-notebook
+push: slides clear-notebook
 	$(JUPYTER) nbconvert --clear-output $(INTRO_BASIC_NB)
 	git add .
 	git commit -am "Update"
 	git push
 
 
-evil-push: clear-notebook
+evil-push: slides clear-notebook
 	$(JUPYTER) nbconvert --clear-output $(INTRO_BASIC_NB)
 	rm -rf .git
 	git init
