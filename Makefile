@@ -22,6 +22,11 @@ INTRO_TOOLS_NB=$(INTRO_TOOLS).ipynb
 INTRO_TOOLS_NB_OUT=$(INTRO_TOOLS).out.ipynb
 INTRO_TOOLS_HTML=$(INTRO_TOOLS).html
 
+INTRO_PANDAS=intro_to_python_pandas
+INTRO_PANDAS_NB=$(INTRO_PANDAS).ipynb
+INTRO_PANDAS_NB_OUT=$(INTRO_PANDAS).out.ipynb
+INTRO_PANDAS_HTML=$(INTRO_PANDAS).html
+
 
 default:
 	@echo "Please select a valid target"
@@ -44,22 +49,28 @@ slides-tools:
 	$(PY_ENV) -m prepare_html --in $(INTRO_TOOLS_HTML)
 
 
-slides: slides-basic slides-tools
+slides-pandas:
+	$(JUPYTER) nbconvert $(INTRO_PANDAS_NB) --to slides --execute
+	mv $(INTRO_PANDAS).slides.html $(INTRO_PANDAS_HTML)
+	$(PY_ENV) -m prepare_html --in $(INTRO_PANDAS_HTML)
+
+
+slides: slides-basic slides-tools slides-pandas
 
 
 clear-notebook:
 	$(JUPYTER) nbconvert --clear-output $(INTRO_BASIC_NB)
+	$(JUPYTER) nbconvert --clear-output $(INTRO_TOOLS_NB)
+	$(JUPYTER) nbconvert --clear-output $(INTRO_PANDAS_NB)
 
 
 push: slides clear-notebook
-	$(JUPYTER) nbconvert --clear-output $(INTRO_BASIC_NB)
 	git add .
 	git commit -am "Update"
 	git push
 
 
 evil-push: slides clear-notebook
-	$(JUPYTER) nbconvert --clear-output $(INTRO_BASIC_NB)
 	rm -rf .git
 	git init
 	git checkout -b main
