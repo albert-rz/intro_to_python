@@ -8,10 +8,6 @@ PY_ENV=.venv/bin/python
 PIP_ENV=.venv/bin/pip
 JUPYTER=.venv/bin/jupyter
 
-#PY_ENV=.venv/Scripts/python
-#PIP_ENV=.venv/Scripts/pip
-#JUPYTER=.venv/Scripts/jupyter
-
 INTRO_BASIC=intro_to_python_basic
 INTRO_BASIC_NB=$(INTRO_BASIC).ipynb
 INTRO_BASIC_NB_OUT=$(INTRO_BASIC).out.ipynb
